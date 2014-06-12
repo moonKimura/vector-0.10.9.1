@@ -19,11 +19,11 @@ before_install:
  - travis_retry sudo apt-get install cabal-install-$CABALVER ghc-$GHCVER
  - export PATH=/opt/ghc/$GHCVER/bin:/opt/cabal/$CABALVER/bin:$PATH
  - cabal --version
- - cabal install hpc-coveralls
 
 install:
  - travis_retry cabal update
  - cabal install --only-dependencies
+ - cabal install hpc-coveralls
 
 script:
  - cabal configure -v2 --enable-library-coverage

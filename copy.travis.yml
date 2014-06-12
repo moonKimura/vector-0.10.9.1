@@ -39,5 +39,5 @@ script:
       exit 1;
    fi
 
-after-script
+after-script:
  - hpc-coveralls vector-tests
