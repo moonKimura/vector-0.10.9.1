@@ -23,10 +23,10 @@ before_install:
 install:
  - travis_retry cabal update
  - cabal install --only-dependencies
- - cabal install hpc-coveralls
+# - cabal install hpc-coveralls
 
 script:
- - cabal configure -v2 --enable-library-coverage
+ - cabal configure -v2# --enable-library-coverage
  - cabal build
  - cabal sdist
  - run-cabal-test
@@ -39,5 +39,5 @@ script:
       exit 1;
    fi
 
-after-script:
- - hpc-coveralls vector-tests
+#after-script:
+# - hpc-coveralls vector-tests
