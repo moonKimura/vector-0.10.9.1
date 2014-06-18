@@ -28,9 +28,8 @@ install:
 script:
  - cabal configure -v2 --enable-library-coverage
  - cabal build
- - cabal sdist
- - ln -s /opt/cabal/$CABALVER/bin ~/.cabal/bin/cabal
  - run-cabal-test
+ - cabal sdist
  - export SRC_TGZ=$(cabal info . | awk '{print $2 ".tar.gz";exit}') ;
    cd dist/;
    if [ -f "$SRC_TGZ" ]; then
