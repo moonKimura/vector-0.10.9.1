@@ -23,7 +23,9 @@ before_install:
 install:
  - travis_retry cabal update
  - cabal install --only-dependencies
- - cabal install hpc-coveralls --avoid-reinstalls --bindir=$HOME/.cabal/bin
+ - cabal sandbox init
+ - cabal install hpc-coveralls --bindir=$HOME/.cabal/bin
+ - cabal sandbox -delete
 
 script:
  - cabal configure -v2 --enable-library-coverage
