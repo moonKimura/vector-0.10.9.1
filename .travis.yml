@@ -22,10 +22,10 @@ before_install:
 
 install:
  - travis_retry cabal update
- - cabal install --only-dependencies
  - cabal sandbox init
  - cabal install hpc-coveralls --bindir=$HOME/.cabal/bin
  - cabal sandbox -delete
+ - cabal install --only-dependencies
 
 script:
  - cabal configure -v2 --enable-library-coverage
