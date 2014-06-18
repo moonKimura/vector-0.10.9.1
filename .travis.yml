@@ -23,13 +23,12 @@ before_install:
 install:
  - travis_retry cabal update
  - cabal install --only-dependencies
- - cabal install hpc-coveralls --avoid-reinstalls --bindir=$HOME/.cabal/bin
+ - cabal install hpc-coveralls --avoid-reinstalls --bindir=/opt/cabal/$CABALVER/bin
 
 script:
  - cabal configure -v2 --enable-library-coverage
  - cabal build
- - ln -s /usr/bin/cabal-$CABALVER /opt/cabal/$CABALVER/bin
- - run-cabal-test
+ - run-cabal-test --show-details=always
  - cabal sdist
  - export SRC_TGZ=$(cabal info . | awk '{print $2 ".tar.gz";exit}') ;
    cd dist/;
