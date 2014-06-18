@@ -24,7 +24,7 @@ install:
  - travis_retry cabal update
  - cabal sandbox init
  - cabal install hpc-coveralls --bindir=$HOME/.cabal/bin
- - cabal sandbox -delete
+ - cabal sandbox delete
  - cabal install --only-dependencies
 
 script:
