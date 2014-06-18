@@ -25,7 +25,7 @@ install:
  - cabal install --only-dependencies --enable-tests
 
 script:
- - cabal configure -v2--enable-tests  --enable-library-coverage
+ - cabal configure -v2 --enable-tests  --enable-library-coverage
  - cabal build
  - cabal test
  - cabal sdist
