@@ -22,13 +22,12 @@ before_install:
 
 install:
  - travis_retry cabal update
- - cabal install hpc-coveralls --avoid-reinstalls
  - cabal install --only-dependencies --enable-tests
 
 script:
- - cabal configure -v2--enable-tests  --enable-library-coverage
+ - cabal configure -v2 --enable-tests  --enable-library-coverage
  - cabal build
- - run-cabal-test --show-details=always
+ - cabal test
  - cabal sdist
  - export SRC_TGZ=$(cabal info . | awk '{print $2 ".tar.gz";exit}') ;
    cd dist/;
@@ -40,4 +39,5 @@ script:
    fi
 
 after-script:
+ - cabal install hpc-coveralls --avoid-reinstalls
  - hpc-coveralls vector-tests
