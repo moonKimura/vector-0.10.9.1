@@ -147,9 +147,10 @@ Library
   if flag(InternalChecks)
     cpp-options: -DVECTOR_INTERNAL_CHECKS
 
-test-suite test
+test-suite vector-test
     hs-source-dirs: test
     main-is: vector-tests.cabal
+    type: exitcode-stdio-1.0
 
 source-repository head
   type:     git
