@@ -148,28 +148,28 @@ Library
     cpp-options: -DVECTOR_INTERNAL_CHECKS
 
 test-suite test
-	hs-source-dirs: tests
-	Main-Is:  Main.hs
-	Build-Depends:
-		base >= 4 && < 5,
-		template-haskell,
-		vector == 0.10.9.1,
-		random,
-		QuickCheck >= 2,
-		test-framework,
-		test-framework-quickcheck2
-	Extensions:
-		CPP,
-		ScopedTypeVariables,
-		PatternGuards,
-		MultiParamTypeClasses,
-		FlexibleContexts,
-		Rank2Types,
-		TypeSynonymInstances,
-		TypeFamilies,
-		TemplateHaskell
-	Ghc-Options: -O0
-	Ghc-Options: -Wall -fno-warn-orphans -fno-warn-missing-signatures
+  hs-source-dirs: tests
+  Main-Is:  Main.hs
+  Build-Depends:
+    base >= 4 && < 5,
+    template-haskell,
+    vector == 0.10.9.1,
+    random,
+    QuickCheck >= 2,
+    test-framework,
+    test-framework-quickcheck2
+  Extensions:
+    CPP,
+    ScopedTypeVariables,
+    PatternGuards,
+    MultiParamTypeClasses,
+    FlexibleContexts,
+    Rank2Types,
+    TypeSynonymInstances,
+    TypeFamilies,
+    TemplateHaskell
+  Ghc-Options: -O0
+  Ghc-Options: -Wall -fno-warn-orphans -fno-warn-missing-signatures
 
 source-repository head
   type:     git
