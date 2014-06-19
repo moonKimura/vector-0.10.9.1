@@ -147,6 +147,21 @@ Library
   if flag(InternalChecks)
     cpp-options: -DVECTOR_INTERNAL_CHECKS
 
+test-suite test
+    hs-source-dirs: test
+    main-is: Main.hs
+    type: exitcode-stdio-1.0
+    build-depends:  vector
+                   , base ==4.*
+                   , deepseq >=1.1 && <1.4
+                   , ghc-prim
+                   , primitive >=0.5.0.1 && < 0.6
+                   , quickcheck
+                   , list
+                   , monoid
+                   , random
+    ghc-options:     -Wall
+
 source-repository head
   type:     git
   location: https://github.com/haskell/vector
