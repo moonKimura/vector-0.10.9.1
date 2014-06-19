@@ -147,8 +147,8 @@ Library
   if flag(InternalChecks)
     cpp-options: -DVECTOR_INTERNAL_CHECKS
 
-test-suite vector-test
-    hs-source-dirs: test
+test-suite test
+    hs-source-dirs: tests
     main-is: Main.hs
     type: exitcode-stdio-1.0
 
