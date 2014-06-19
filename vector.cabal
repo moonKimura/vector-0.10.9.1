@@ -46,7 +46,7 @@ Description:
 	* Safe Haskell support removed
 	.
 
-Cabal-Version:  >= 1.6
+Cabal-Version:  >= 1.16
 Build-Type:     Simple
 
 Extra-Source-Files:
