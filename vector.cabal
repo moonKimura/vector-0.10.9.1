@@ -149,7 +149,7 @@ Library
 
 test-suite vector-test
     hs-source-dirs: test
-    main-is: vector-tests.cabal
+    main-is: main.hs
     type: exitcode-stdio-1.0
 
 source-repository head
